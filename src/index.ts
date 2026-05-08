@@ -66,7 +66,7 @@ try {
 
   // Limpa a colecao anterior de chunks para que a execucao atual comece com uma
   // base consistente e sem documentos repetidos.
-  clearAll(_neo4jVectorStore, CONFIG.neo4j.nodeLabel);
+  await clearAll(_neo4jVectorStore, CONFIG.neo4j.nodeLabel);
 
   // Insere os chunks um por vez. Ao adicionar cada documento, o vector store
   // calcula o embedding do texto e grava no Neo4j os dados necessarios para a
